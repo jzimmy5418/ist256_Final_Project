@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JZ's 3D Prints</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="text-center">
+    <a href="images/jz3dlogo.png" target="_blank">
+        <img src="images/jz3dlogo.png" width="200px">
+    </a>
+    <h2><i>"Bringing Your Ideas to Life"</i></h2>
+
+    <hr>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-2">
+            <input id="homeButton" type="button" class="btn btn-info" value="Home">
+        </div>
+        <div class="col-lg-2">
+            <input id="productsButton" type="button" class="btn btn-info" value="Our Products">
+        </div>
+        <div class="col-lg-2">
+            <input id="aboutButton" type="button" class="btn btn-info" value="About Us">
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="homeText" style="display: none">
+        <p class="fs-4">Hello and Welcome to JZ's 3D Prints!</p>
+        <p>We offer many various 3D prints specializing in scale models.</p>
+        <p>Our goal is to provide modelers with unique scale models which are not offered by larger companies.</p>
+        <p> All of our models are printed on demand to offer a wide selection of models at a low price. Please expect up to a week for models to be printed and shipped.</p>
+        <h4>FAQ</h4>
+        <div>
+            <p>"What is the difference between materials offered?"</p>
+            <p>Resin prints offer a higher quality print with better details, however these prints are more fragile amd are not recommended for prints where strength is required.
+                Meanwhile Standard filament 3d prints are generally stronger and offer a wider range of materials. On our site we offer PLA and ABS plastics. ABS is considered stronger and more heat-resistant while PLA is more environmentally friendly.</p>
+            <p>"Why does it take up to a week for the product to be shipped?"</p>
+            <p>All of our models are printed on demand, meaning they are only printed once an order is placed. This is to keep our products at the highest possible quality, as with resin prints there is the possibility of warping and becoming brittle.</p>
+        </div>
+    </div>
+
+    <div id="productsText">
+        <form action="" method="post">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        C44-9W Cab
+                    </p>
+                    <a href="images/c44dash9.png" target="_blank">
+                        <img src="images/c44dash9.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="c44CabScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="c44CabScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="c44CabMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="c44CabQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="c44CabPrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="c44DescBtn" value="Description">
+                    <div id="c44Description" style="display: none">
+                    </div>
+                </div>
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        EMD Admiral-Style Cab
+                    </p>
+                    <a href="images/admiralCab.png" target="_blank">
+                        <img src="images/admiralCab.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="admiralCabScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="admiralCabScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="admiralCabMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Nose Length
+                            <select name="admiralCabLength">
+                                <option value="89.5">89.5 Inches</option>
+                                <option value="71">71 Inches</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="admiralCabQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="admiralCabPrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="admiralDescBtn" value="Description">
+                    <div id="admiralDescription" style="display: none">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        Squad Fire Truck
+                    </p>
+                    <a href="images/squad.png" target="_blank">
+                        <img src="images/squad.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="squadScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="squadScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="squadMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="squadMaterial" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="squadPrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="squadDescBtn" value="Description">
+                    <div id="squadDescription" style="display: none">
+                    </div>
+                </div>
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        Gondola Cover
+                    </p>
+                    <a href="images/gonCover.png" target="_blank">
+                        <img src="images/gonCover.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="gonCoverScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="gonCoverScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="gonCoverMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="gonCoverQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="gonCoverPrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="gonDescBtn" value="Description">
+                    <div id="gonDescription" style="display: none">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        GP59E
+                    </p>
+                    <a href="images/gp59e.png" target="_blank">
+                        <img src="images/gp59e.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="gp59eScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="gp59eScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="gp59eMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="gp59eQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="gp59ePrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="gp59DescBtn" value="Description">
+                    <div id="gp59Description" style="display: none">
+                    </div>
+                </div>
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        RPM-4C Road-Slug
+                    </p>
+                    <a href="images/rpm4c.png" target="_blank">
+                        <img src="images/rpm4c.png" class="img-fluid">
+                    </a>
+                    <div class="form-group">
+                        <label>Scale:
+                            <input type="radio" name="rpm4cScale" value="HO-Scale" checked>HO-Scale
+                            <input type="radio" name="rpm4cScale" value="N-Scale">N-Scale
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="rpm4cMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="rpm4cQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
+                    <div id="rpm4cPrice">$19.95</div>
+                    <input type="button" class="btn btn-sm btn-outline-secondary" id="rpm4cDescBtn" value="Description">
+                    <div id="rpm4cDescription" style="display: none">
+                        This is a replacement cab designed to fit on Athearn HO scale Dash-9 models. It is designedcan easily be modified to fit on models
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        Custom Filament Prints
+                    </p>
+                </div>
+                <div class="col-lg-4 border">
+                    <p class="fs-4">
+                        Custom Resin Prints
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <input type="submit" class="btn btn-primary" value="Place Order">
+        </form>
+    </div>
+
+    <div id="aboutText" style="display: none">
+        hello about
+    </div>
+    <br>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
