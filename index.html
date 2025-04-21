@@ -29,7 +29,7 @@
 
     <hr>
 
-    <div id="homeText" style="display: none">
+    <div id="homeText">
         <p class="fs-4">Hello and Welcome to JZ's 3D Prints!</p>
         <p>We offer many various 3D prints specializing in scale models.</p>
         <p>Our goal is to provide modelers with unique scale models which are not offered by larger companies.</p>
@@ -38,13 +38,13 @@
         <div>
             <p>"What is the difference between materials offered?"</p>
             <p>Resin prints offer a higher quality print with better details, however these prints are more fragile amd are not recommended for prints where strength is required.
-                Meanwhile Standard filament 3d prints are generally stronger and offer a wider range of materials. On our site we offer PLA and ABS plastics. ABS is considered stronger and more heat-resistant while PLA is more environmentally friendly.</p>
+                Meanwhile, standard filament 3d prints are generally stronger and offer a wider range of materials. On our site we offer PLA and ABS plastics. ABS is considered stronger and more heat-resistant while PLA is more environmentally friendly.</p>
             <p>"Why does it take up to a week for the product to be shipped?"</p>
             <p>All of our models are printed on demand, meaning they are only printed once an order is placed. This is to keep our products at the highest possible quality, as with resin prints there is the possibility of warping and becoming brittle.</p>
         </div>
     </div>
 
-    <div id="productsText">
+    <div id="productsText" style="display: none">
         <form action="" method="post">
             <div class="row justify-content-center">
                 <div class="col-lg-4 border">
@@ -82,6 +82,7 @@
                     <div id="c44CabPrice">$19.95</div>
                     <input type="button" class="btn btn-sm btn-outline-secondary" id="c44DescBtn" value="Description">
                     <div id="c44Description" style="display: none">
+                        Description
                     </div>
                 </div>
                 <div class="col-lg-4 border">
@@ -127,6 +128,7 @@
                     <div id="admiralCabPrice">$19.95</div>
                     <input type="button" class="btn btn-sm btn-outline-secondary" id="admiralDescBtn" value="Description">
                     <div id="admiralDescription" style="display: none">
+                        description
                     </div>
                 </div>
             </div>
@@ -289,13 +291,34 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 border">
                     <p class="fs-4">
-                        Custom Filament Prints
+                        Custom Prints
                     </p>
-                </div>
-                <div class="col-lg-4 border">
-                    <p class="fs-4">
-                        Custom Resin Prints
-                    </p>
+                    <div>
+                        <p>We offer the option to custom print your own 3D models.</p>
+                        <p>Each print will cost an initial cost of $14.95 with an additional cost $0.30 per gram in resin and $0.19 per gram for filament for the weight of the final print. </p>
+                        <p>Please select the total number of prints and material below, and we will reach out the next business day for your OBJ or STL file and to offer a quote.</p>
+                        <p>Please Note: We will only accept STL or OBJ file types for printing. The initial $14.95 will be charged at checkout and remaining cost per gram will be billed separately after product is shipped </p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Material:
+                            <select name="customMaterial">
+                                <option value="default" selected>Please Select One</option>
+                                <option value="resin">Resin (grey)</option>
+                                <option value="plaWhite">PLA-White</option>
+                                <option value="plaBlack">PLA-Black</option>
+                                <option value="plaGrey">PLA-Grey</option>
+                                <option value="absWhite">ABS-White</option>
+                                <option value="absBlack">ABS-Black</option>
+                                <option value="absGrey">ABS-Grey</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity:
+                            <input type="number" name="customQuantity" value="0" min="0" max="10">
+                        </label>
+                    </div>
                 </div>
             </div>
 
