@@ -93,6 +93,9 @@ $(document).ready(function () {
     })
 
     $aboutButton.click(function () {
+        addButtonClasses();
+        $aboutButton.removeClass('btn-info');
+        $aboutButton.addClass('btn-outline-primary');
         $homeText.hide();
         $productsText.hide();
         $aboutText.show();
@@ -100,6 +103,9 @@ $(document).ready(function () {
     })
 
     $homeButton.click(function () {
+        addButtonClasses();
+        $homeButton.removeClass('btn-info');
+        $homeButton.addClass('btn-outline-primary');
         $productsText.hide();
         $aboutText.hide();
         $homeText.show();
@@ -108,13 +114,13 @@ $(document).ready(function () {
 
     $productsButton.click(function () {
         $.ajax({
-            url: "productDescriptions.txt",
+            url: "productDescription.json",
             type: "GET",
             crossDomain: true,
             success: function (data) {
                 console.log(data);
-                const lines = data.trim().split("\n");
-                lines.forEach(function (line) {
+                const descriptions = data.items;
+                descriptions.forEach(function (line) {
                     descriptionList.push(line);
                 });
                 console.log(descriptionList);
@@ -129,10 +135,21 @@ $(document).ready(function () {
                 console.log(error);
             }
         })
+        addButtonClasses();
+        $productsButton.removeClass("btn-info");
+        $productsButton.addClass("btn-outline-primary");
         $aboutText.hide();
         $homeText.hide();
         $productsText.show();
         console.log("products")
     })
 
+    function addButtonClasses(){
+        $productsButton.removeClass("btn-outline-primary");
+        $productsButton.addClass("btn-info");
+        $homeButton.removeClass("btn-outline-primary");
+        $homeButton.addClass("btn-info");
+        $aboutButton.removeClass("btn-outline-primary");
+        $aboutButton.addClass("btn-info");
+    }
 })
