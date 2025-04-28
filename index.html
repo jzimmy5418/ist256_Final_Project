@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container-fluid text-center">
-    <a href="images/jz3dlogo.png" target="_blank">
+    <a href="index.html">
         <img src="images/jz3dlogo.png" width="200px">
     </a>
     <h2><i>"Bringing Your Ideas to Life"</i></h2>
@@ -216,7 +216,7 @@
                             <input type="number" name="gonCoverQuantity" value="0" min="0" max="10">
                         </label>
                     </div>
-                    <div id="gonCoverPrice">$19.95</div>
+                    <div id="gonCoverPrice">$24.95</div>
                     <input type="button" class="btn btn-sm btn-outline-secondary" id="gonDescBtn" value="Description">
                     <div id="gonDescription" style="display: none">
                     </div>
@@ -256,7 +256,7 @@
                             <input type="number" name="gp59eQuantity" value="0" min="0" max="10">
                         </label>
                     </div>
-                    <div id="gp59ePrice">$19.95</div>
+                    <div id="gp59ePrice">$35.95</div>
                     <input type="button" class="btn btn-sm btn-outline-secondary" id="gp59DescBtn" value="Description">
                     <div id="gp59Description" style="display: none">
                     </div>
@@ -293,7 +293,7 @@
                             <input type="number" name="rpm4cQuantity" value="0" min="0" max="10">
                         </label>
                     </div>
-                    <div id="rpm4cPrice">$19.95</div>
+                    <div id="rpm4cPrice">$35.95</div>
                     <input type="button" class="btn btn-sm btn-outline-secondary" id="rpm4cDescBtn" value="Description">
                     <div id="rpm4cDescription" style="display: none">
                         This is a replacement cab designed to fit on Athearn HO scale Dash-9 models. It is designedcan easily be modified to fit on models
@@ -311,7 +311,6 @@
                         <p>Each print will cost an initial cost of $14.95 with an additional cost $0.30 per gram in resin and $0.19 per gram for filament for the weight of the final print. </p>
                         <p>Please select the total number of prints and material below, and we will reach out the next business day for your OBJ or STL file and to offer a quote.</p>
                         <p>Please Note: We will only accept STL or OBJ file types for printing. The initial $14.95 will be charged at checkout and remaining cost per gram will be billed separately after product is shipped </p>
-
                     </div>
                     <div class="form-group">
                         <label>Material:
@@ -334,9 +333,39 @@
                     </div>
                 </div>
             </div>
-
             <br>
-            <input type="submit" class="btn btn-primary" value="Place Order">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <h6>Shipping and billing information:</h6>
+                    <div class="form-group">
+                        <label>
+                            First Name:
+                            <input type="text" name="shippingFName" value="" placeholder="First Name" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Last Name:
+                            <input type="text" name="shippingLName" value="" placeholder="Last Name" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Email:
+                            <input type="email" name="shippingEmail" value="" placeholder="Email" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Address:
+                            <input type="text" name="shippingAddress" value="" placeholder="Address" required>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <input type="submit" class="btn btn-primary" value="Place Order" id="orderButton">
         </form>
     </div>
 

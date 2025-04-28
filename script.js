@@ -5,6 +5,20 @@ $(document).ready(function () {
     let $productsButton = $('#productsButton');
     let $homeText = $('#homeText');
     let $homeButton = $('#homeButton');
+    let $orderButton = $('#orderButton');
+
+    let $gp59eScale = $('input[name="gp59eScale"]');
+    let $gp59ePrice = $('#gp59ePrice');
+    let $c44CabScale = $('input[name="c44CabScale"]');
+    let $c44CabPrice = $('#c44CabPrice');
+    let $admiralCabScale = $('input[name="admiralCabScale"]');
+    let $admiralCabPrice = $('#admiralCabPrice');
+    let $squadScale = $('input[name="squadScale"]');
+    let $squadPrice = $('#squadPrice');
+    let $gonCoverScale = $('input[name="gonCoverScale"]');
+    let $gonCoverPrice = $('input[name="gonCoverPrice"]');
+    let $rpm4cScale = $('input[name="rpm4cScale"]');
+    let $rpm4cPrice = $('#rpm4cPrice');
 
     let descriptionList = [];
     let $c44Description = $('#c44Description');
@@ -25,6 +39,70 @@ $(document).ready(function () {
     let $rpm4cDescription = $('#rpm4cDescription');
     let $rpm4cDescBtn = $('#rpm4cDescBtn');
     let $rpm4cDesc = 0;
+
+    $gp59eScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $gp59ePrice.html("$29.95")
+        }
+        else if (scale==="HO-Scale"){
+            $gp59ePrice.html("$35.95")
+        }
+    })
+
+    $c44CabScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $c44CabPrice.html("$16.95")
+        }
+        else if (scale==="HO-Scale"){
+            $c44CabPrice.html("$19.95")
+        }
+    })
+
+    $admiralCabScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $admiralCabPrice.html("$16.95")
+        }
+        else if (scale==="HO-Scale"){
+            $admiralCabPrice.html("$19.95")
+        }
+    })
+
+    $squadScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $squadPrice.html("$16.95")
+        }
+        else if (scale==="HO-Scale"){
+            $squadPrice.html("$19.95")
+        }
+    })
+
+    $gonCoverScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $gonCoverPrice.html("$20.95")
+        }
+        else if (scale==="HO-Scale"){
+            $gonCoverPrice.html("$24.95")
+        }
+    })
+
+    $rpm4cScale.on('change', function () {
+        let scale = $(this).val();
+        if (scale==="N-Scale"){
+            $rpm4cPrice.html("$29.95")
+        }
+        else if (scale==="HO-Scale"){
+            $rpm4cPrice.html("$35.95")
+        }
+    })
+
+    $orderButton.on('click', function () {
+        alert("Order has been successfully placed.");
+    })
 
     $c44DescBtn.on('click', function () {
         if ($c44Desc === 0){
