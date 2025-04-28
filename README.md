@@ -1,6 +1,6 @@
 # ist256_Final_Project
 
-Joshua Zimmermann
+Joshua Zimmerman
 
 Final Project
 
